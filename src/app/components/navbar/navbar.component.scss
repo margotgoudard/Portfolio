@@ -1,4 +1,10 @@
-/*stylisation du menu*/
+nav {
+    height: 40px; /* Assurez-vous qu'il n'y a pas de padding/margin supplémentaire */
+    width: 100%;
+    /* Ajoutez box-sizing pour inclure le padding et le border dans la hauteur totale si nécessaire */
+    box-sizing: border-box;
+  }
+  
 ul#menu {
 	margin-top : 1%; /*création de marge*/
 	padding-left : 75%; /*décale le menu de 65% du bord gauche*/
