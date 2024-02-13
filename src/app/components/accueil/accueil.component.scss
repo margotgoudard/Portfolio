@@ -19,6 +19,10 @@ $color-principal: #AC967F;
     min-height: calc(72.5vh);
 }
 
+@media (max-width: 600px) {
+    min-height: calc(68vh);
+}
+
 }
 
 .bienvenue {
