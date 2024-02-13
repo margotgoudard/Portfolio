@@ -1,0 +1,345 @@
+
+/*stylisation du menu*/
+ul#menu {
+	margin-top : 1%; /*création de marge*/
+	padding-left : 75%; /*décale le menu de 65% du bord gauche*/
+	padding-right : 5%;
+	list-style-type: none; /*enlève tout style au menu (puce..)*/
+	display: flex; /*mise à l'horizontal*/
+	justify-content: space-between;
+}
+
+/*stylisation du texte du menu*/
+ul#menu li a {
+	color: #5B7466; /*couleur du texte*/
+	text-decoration : none; /*enlève les traits de lien*/
+	border-bottom: 1px solid #5B7466; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
+	padding : 8px; /*permet de créer un espacement de 8px entre le texte et le soulignage*/
+}
+
+/*changment de style unique pour l'onglet cv du menu*/
+ul#menu li a.cv {
+	color : black;
+	border-bottom: 1px solid black;
+}
+
+
+/*stylisation section1*/
+.section1{
+	background-image : url("/assets/fond.png"); /*met une image en fond*/
+	background-repeat: repeat-x;
+	background-size: 75% 100%;
+	width : 100%; /*section prend l'intégralité de la taille de l'écran*/
+	height: 100%;
+}
+
+/*stylisation menu*/
+ul#menu2 {
+	position : fixed; /*ne bouge pas pendant le scrolling*/
+	width : 10%;
+	margin-top: 22%;
+	list-style-type: circle; /*style de puce*/
+}
+
+/*stylisation texte menu*/
+ul#menu2 li a {
+	color: black;
+	text-decoration : none; 
+	}
+
+/*stylisation bloc1*/
+.bloc1 {
+	float:left; /*position relative sur la gauche*/
+	margin-top: 15%;
+	margin-left: 20%;
+	background-color: white;
+	width : 30%;
+	height : 50%;
+}
+
+/*stylisation image*/
+.image {
+	width : 50%;
+	clip-path:ellipse(50% 35%); /*forme de rond*/
+	margin : auto; /*met au centre du bloc*/
+}
+
+/*stylisation texte bloc*/
+.etudiante {
+	display: flex; /*permet d'aligner le texte au centre*/
+	justify-content: center;
+}
+
+/*stylisation bloc2*/
+.bloc2 {
+	float : right; /*position relative sur la droite*/
+	margin-top: 15%;
+	margin-right: 20%;
+	background-color: #b7cdb7;
+	width : 30%;
+	height : 50%;
+
+}
+/*stylisation contenu bloc2*/
+.conteneur {
+	position : absolute; 
+	padding-top : 5%;
+	padding-left: 3%;
+	font-size: 30pt;
+	color : white;
+	animation-name: animation; /*attribution d'une animation*/
+	animation-duration: 2s; /*durée de l'animation*/
+} 
+
+/*animation apparition d'une position à une autre*/
+@keyframes animation {
+	from {
+	  margin-left: 100%;
+	  width: 100%;
+	}
+  
+	to {
+	  margin-left: 0;
+	  width: 100%;
+	}
+  }
+ 
+/*stylisation section2*/
+.section2{
+	background-color : white ;
+	width : 100%;
+	height : 100%;
+}
+
+/*ancrage*/
+#profilperso {
+	margin-top : 0;
+	color:white;
+}
+
+/*stylisation conteneur2*/
+.conteneur2 {
+	margin-left: 8%; /*marge pour tout le contenu*/
+	margin-right: 8%;
+}
+
+/*stylisation titre1*/
+.section2 h1{
+	margin-top: 3%;
+}
+
+/*stylisation titre2*/
+.section2 h2{
+	margin-left : 2%;
+	margin-top : 5%;
+}
+
+/*stylisation texte*/
+.profil_perso{
+	font-size : 20px; /*taille police*/
+	text-align : justify; /*mise en page justifié*/
+	margin-left : 5%;
+	margin-right : 5%;
+}
+
+/*stylisation titre3*/
+.section2 h3{
+	margin-left : 2%;
+	margin-top : 3%;
+}
+
+/*stylisation liste*/
+ul#competences1{ 
+margin-left : 6%;
+list-style-type: square; /*puce forme carrée*/
+display: flex; /*permet d'espacer les éléments de la liste*/
+justify-content: space-between;
+margin-right : 50%;
+}
+
+/*stylisation éléments liste*/
+ul#competences1 li {
+	font-size : 18px; 
+		float : left;
+}
+
+/*stylisation liste*/
+ul#competences2{ 
+	margin-left : 6%;
+	list-style-type: square;
+	display: flex;
+	justify-content: space-between;
+	margin-right : 25%;
+	}
+	
+/*stylisation éléments liste*/
+ul#competences2 li {
+		font-size : 18px;
+		float : left;
+	}
+
+/*stylisation section3*/
+.section3{
+	width : 100%;
+	height : 100%;
+	background-color : #5B7466;
+}
+
+/*ancrage*/
+#experiencepro {
+	padding-top : 0;
+	color : #5B7466;
+}
+
+/*stylisation titre*/
+.section3 h1 {
+	color : white ;
+	margin-top : 3%;
+}
+
+/*stylisation tableau*/
+table {
+	border: solid white 1px; /*type de bordure tableau*/
+	margin : auto;
+}
+
+/*stylisation cellules*/
+td {
+	border: solid white 1px;
+	border-collapse : collapse;/*bordure des cellules*/
+	padding : 1%;
+}
+
+.tableau {
+	color : white;
+	padding-top : 5%;
+}
+
+/*texte aligné pour cellules et titres*/
+th, td{
+	text-align : center;
+}
+
+/*modification puce pour les listes*/
+ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
+	list-style-type: circle;
+}
+
+/*stylisation section4*/
+.section4 {
+	width : 100%;
+	height : 100%;
+}
+
+/*ancrage*/
+#education{
+	margin-top : 0px;
+	color:white;
+}
+
+/*stylisation titre*/
+.section4 h1 {
+	padding-top : 2%;
+}
+
+/*stylisation div ecole*/
+.ecole { 
+	display: inline-block; 
+	height: 40%; 
+	width: 25%;
+	clip-path: ellipse(45% 40%); /*bloc en forme de rond*/
+	margin-bottom: 3%;
+	margin-top : 3%;
+	margin-left: 12%;
+	padding-top: 10%;
+	text-align: center;
+	background-color: #b7cdb7;
+	filter:opacity(80%);/*modification opacité*/
+	filter:brightness(90%); /*modification luminosité*/
+	} 
+	
+/*stylisation div peip*/
+.peip {
+	display: inline-block;
+	height: 40%; 
+	width: 25%;
+	clip-path: ellipse(45% 40%); 
+	padding-top: 10%;
+	margin-top : 0;
+	text-align: center;
+	background-color: #b7cdb7;
+	filter:opacity(80%);
+	filter:brightness(90%);
+}
+
+/*stylisation div lycée*/
+.lycée{
+	display: inline-block;
+	height: 40%; 
+	width: 25%;
+	clip-path: ellipse(45% 40%); 
+	padding-top: 10%;
+	text-align: center;
+	background-color: #b7cdb7;
+	filter:opacity(80%);
+	filter:brightness(90%);
+}
+
+/*stylisation footer*/
+footer {
+	width : 100%;
+	height: 17%;
+	background-color: #5B7466;
+}
+
+/*ancrage*/
+#contact {
+	margin-left: 5%;
+	color: white;
+	padding-top : 1%;
+}
+
+/*stylisation div contacts*/
+.contacts {
+	float : left;
+	width : 20%;
+	margin-left: 7%;
+	font-size: 18px;
+	margin-top: 1%;
+	color : white;
+}
+
+/*stylisation bouton*/
+.bouton {
+	float : right;
+  	background-color: white;
+  	border-radius: 10px; /*modification degrès angles*/
+ 	border: 2px solid black;
+ 	text-align: center;
+  	font-size: 15px;
+	padding: 1%;
+  	width: 10%;
+  	height: 10%;	
+	margin-right : 10%;
+}
+
+/*stylisation texte du bouton*/
+.bouton a{
+	text-decoration: none;
+	color : black;
+}
+
+
+/*stylisation bouton de changement de style*/
+.bouton_style {
+	float : right;
+	margin-right : 8%;
+	padding : 1%;
+	background-color: white;
+  	border-radius: 10px; /*modification degrès angles*/
+ 	border: 2px solid black;
+ 	text-align: center;
+  	font-size: 15px;
+  	width: 10%;
+  	height: 10%;
+}

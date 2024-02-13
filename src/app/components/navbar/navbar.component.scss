@@ -1,0 +1,23 @@
+/*stylisation du menu*/
+ul#menu {
+	margin-top : 1%; /*création de marge*/
+	padding-left : 75%; /*décale le menu de 65% du bord gauche*/
+	padding-right : 5%;
+	list-style-type: none; /*enlève tout style au menu (puce..)*/
+	display: flex; /*mise à l'horizontal*/
+	justify-content: space-between;
+}
+
+/*stylisation du texte du menu*/
+ul#menu li a {
+	color: #5B7466; /*couleur du texte*/
+	text-decoration : none; /*enlève les traits de lien*/
+	border-bottom: 1px solid #5B7466; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
+	padding : 8px; /*permet de créer un espacement de 8px entre le texte et le soulignage*/
+}
+
+/*changment de style unique pour l'onglet cv du menu*/
+ul#menu li a.accueil {
+	color : black;
+	border-bottom: 1px solid black;
+}
