@@ -1,8 +1,8 @@
 // Variables pour les couleurs et autres valeurs réutilisables
-$color-principal: #5B7466;
+$color-principal: #AC967F;
 
 .container {
-  background-image: url("/assets/accueil.jpg");
+  background-image: url("/assets/accueil.png");
   background-size: cover;
   background-repeat: no-repeat; // pas de répétition de l'image de fond
   display: flex;
@@ -11,7 +11,7 @@ $color-principal: #5B7466;
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: calc(84.5vh);
+  min-height: calc(85vh);
   box-sizing: border-box;
   overflow-x: hidden;
 
@@ -26,6 +26,7 @@ $color-principal: #5B7466;
   color: $color-principal;
   margin-top: 10%;
   margin-left: 30%;
+  animation: 1s ease-out 0s 1 slideInFromRight;
 
   @media (max-width: 768px) {
     font-size: 50px; // Ajustez selon le besoin
@@ -40,10 +41,33 @@ $color-principal: #5B7466;
   color: $color-principal;
   margin-top: 7%;
   margin-left: 5%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 
   @media (max-width: 768px) {
     font-size: 16px; 
     margin: 20% 10% 0;
   }
 }
+
+@keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 

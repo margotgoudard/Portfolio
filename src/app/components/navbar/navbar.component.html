@@ -1,6 +1,12 @@
 <nav>
-    <ul id="menu">
+    <div class="logo">
+        <img src="assets/logo.png" alt="Logo"/>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul id="menu" #menu class="hidden">
         <li><a routerLink="/accueil" routerLinkActive="active"><strong>Accueil</strong></a></li>
-        <li><a routerLink="/profil" routerLinkActive="active"><strong>CV</strong></a></li>
+        <li><a routerLink="/profil" routerLinkActive="active"><strong>Profil</strong></a></li>
+        <li><a routerLink="/experiencepro" routerLinkActive="active"><strong>Expériences Professionnelles</strong></a></li>
+        <li><a routerLink="/projets" routerLinkActive="active"><strong>Projets</strong></a></li>
     </ul>
 </nav>

@@ -1,25 +1,41 @@
 nav {
-    height: 40px; /* Assurez-vous qu'il n'y a pas de padding/margin supplémentaire */
+    height: 50px; /* Assurez-vous qu'il n'y a pas de padding/margin supplémentaire */
     width: 100%;
-    /* Ajoutez box-sizing pour inclure le padding et le border dans la hauteur totale si nécessaire */
     box-sizing: border-box;
+    display: flex; /* Utilisez flexbox pour aligner les éléments */
+    align-items: center; /* Alignez les éléments verticalement au centre */
+    justify-content: space-between;
   }
-  
+
+  .logo {
+    flex: 1; /* Donnez de la flexibilité pour permettre l'ajustement de la taille */
+    display: flex; /* Utilisez flexbox ici aussi pour centrer l'image du logo */
+    align-items: center; /* Centrez verticalement l'image du logo */
+    padding-left: 1%; /* Ajoutez du padding si nécessaire */
+}
+
 ul#menu {
-	margin-top : 1%; /*création de marge*/
-	padding-left : 75%; /*décale le menu de 65% du bord gauche*/
-	padding-right : 5%;
-	list-style-type: none; /*enlève tout style au menu (puce..)*/
-	display: flex; /*mise à l'horizontal*/
-	justify-content: space-between;
+	flex: 3; /* Ajustez la flexibilité pour occuper l'espace restant */
+    display: flex; /* Utilisez flexbox pour aligner les liens du menu */
+    justify-content: space-between; /* Alignez les éléments du menu à la fin (à droite) */
+    list-style-type: none; /* Enlevez les puces de la liste */
+    margin: 0; /* Enlevez la marge par défaut de la liste */
+    padding: 0; 
+    padding-right : 5%;
+    @media (max-width: 768px) {
+        padding-right : 5%;
+    } 
 }
 
 /*stylisation du texte du menu*/
 ul#menu li a {
-	color: #5B7466; /*couleur du texte*/
+	color: #AC967F; /*couleur du texte*/
 	text-decoration : none; /*enlève les traits de lien*/
-	border-bottom: 1px solid #5B7466; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
-	padding : 8px; /*permet de créer un espacement de 8px entre le texte et le soulignage*/
+	border-bottom: 1px solid #AC967F; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
+	padding : 8px; 
+    @media (max-width: 768px) {
+        font-size: 12px;
+    } 
 }
 
 /*changment de style unique pour l'onglet cv du menu*/
@@ -27,3 +43,44 @@ ul#menu li a.accueil {
 	color : black;
 	border-bottom: 1px solid black;
 }
+
+img[alt="Logo"] {
+    width: 40%;
+    height: auto;
+    @media (max-width: 768px) {
+        width: 60%;
+      }
+  }
+
+  .hamburger {
+    display: none; /* Cachez par défaut l'icône hamburger */
+    font-size: 24px; /* Taille de l'icône hamburger */
+    background: none;
+    border: none;
+    color: #AC967F; /* Couleur de l'icône */
+  }
+  
+  .hidden {
+    display: none; /* Cachez le menu par défaut */
+  }
+  
+  @media (max-width: 480px) { /* Utilisez une valeur de breakpoint qui convient à vos besoins */
+    .hamburger {
+      display: block; /* Affichez l'icône hamburger sur petits écrans */
+    }
+  
+    ul#menu {
+      display: none; /* Assurez-vous que le menu est caché */
+      flex-direction: column; /* Les éléments du menu doivent s'afficher en colonne */
+      width: 100%; /* Le menu déroulant doit prendre toute la largeur */
+    }
+  
+    ul#menu.open {
+      display: flex; /* Affichez le menu lorsque le menu est ouvert */
+    }
+  
+    /* Cachez les éléments de la liste du menu principal et affichez l'icône hamburger */
+    .logo, ul#menu li:not(:first-child) {
+      display: none;
+    }
+  }
