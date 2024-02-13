@@ -10,6 +10,7 @@ import { ExperienceComponent } from "./components/experience/experience.componen
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { EducationComponent } from "./components/education/education.component";
 import { NgModule } from "@angular/core";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgModule } from "@angular/core";
     ProjetComponent,
     ExperienceComponent,
     NavbarComponent,
-    EducationComponent
+    EducationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

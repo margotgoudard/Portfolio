@@ -11,28 +11,27 @@ $color-principal: #5B7466;
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: calc(92vh);
+  min-height: calc(84.5vh);
   box-sizing: border-box;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    min-height: calc(72.5vh);
 }
 
-
-img {
-    max-width: 100%;
-    height: auto;
-  }
-
+}
 
 .bienvenue {
   font-size: 100px;
   color: $color-principal;
-  margin-top: 18%;
+  margin-top: 10%;
   margin-left: 30%;
 
   @media (max-width: 768px) {
     font-size: 50px; // Ajustez selon le besoin
-    margin-top: 10%;
-    margin-left: 10%;
+    margin-top: 18%;
+    margin-right: 15%;
+    text-align: right;
   }
 }
 
@@ -43,30 +42,8 @@ img {
   margin-left: 5%;
 
   @media (max-width: 768px) {
-    font-size: 16px; // Ajustez selon le besoin
-    margin: 5% 10% 0; // Top RightLeft Bottom
+    font-size: 16px; 
+    margin: 20% 10% 0;
   }
 }
 
-footer {
-  margin-bottom: 0; // Coller le footer en bas
-  padding-top: 2%;
-  width: 100%;
-  background-color: $color-principal; // Optionnel : Fond pour le footer
-
-  .contacts {
-    float: left;
-    width: 50%;
-    margin-left: 15%;
-    font-size: 18px;
-    margin-top: 1%;
-    color: #fff; // Changement pour contraste
-
-    @media (max-width: 768px) {
-      float: none;
-      width: 100%;
-      text-align: center;
-      margin-left: 0;
-    }
-  }
-}
