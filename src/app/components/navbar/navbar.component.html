@@ -2,7 +2,7 @@
     <div class="logo">
         <img src="assets/logo.png" alt="Logo"/>
     </div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" (click)="toggleMenu()">☰</button>
     <ul id="menu" #menu class="hidden">
         <li><a routerLink="/accueil" routerLinkActive="active"><strong>Accueil</strong></a></li>
         <li><a routerLink="/profil" routerLinkActive="active"><strong>Profil</strong></a></li>
