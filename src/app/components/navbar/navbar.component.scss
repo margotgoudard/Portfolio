@@ -52,6 +52,7 @@ img[alt="Logo"] {
       }
   }
 
+
   .hamburger {
     display: none; /* Cachez par défaut l'icône hamburger */
     font-size: 24px; /* Taille de l'icône hamburger */
@@ -64,7 +65,7 @@ img[alt="Logo"] {
     display: none; /* Cachez le menu par défaut */
   }
   
-  @media (max-width: 480px) { /* Utilisez une valeur de breakpoint qui convient à vos besoins */
+  @media (max-width: 600px) { /* Utilisez une valeur de breakpoint qui convient à vos besoins */
     .hamburger {
       display: block; /* Affichez l'icône hamburger sur petits écrans */
     }
@@ -76,11 +77,24 @@ img[alt="Logo"] {
     }
   
     ul#menu.open {
-      display: flex; /* Affichez le menu lorsque le menu est ouvert */
+        display: flex; /* Affiche le menu */
+        flex-direction: column; /* Affiche les éléments du menu en colonne */
+        position: absolute; /* Permet au menu de s'afficher par-dessus le contenu */
+        background-color: #fff; /* Choisissez une couleur de fond appropriée */
+        width: auto; /* Le menu déroulant prend toute la largeur */
+        top: 50px; /* Ajustez en fonction de la hauteur de votre barre de navigation */
+        right: 0; /* Aligné à gauche */
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+        border-radius: 10px;
+      }
+
+      
+    img[alt="Logo"] {
+        width: 30%;
+     }
+
+     ul#menu.open li a {
+        border-bottom: none; /* Supprime le soulignement */
     }
-  
-    /* Cachez les éléments de la liste du menu principal et affichez l'icône hamburger */
-    .logo, ul#menu li:not(:first-child) {
-      display: none;
-    }
+   
   }
