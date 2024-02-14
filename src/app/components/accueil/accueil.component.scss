@@ -11,17 +11,9 @@ $color-principal: #b0a092;
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: calc(85vh);
+  min-height: calc(100vh);
   box-sizing: border-box;
   overflow-x: hidden;
-
-  @media (max-width: 768px) {
-    min-height: calc(72.5vh);
-}
-
-@media (max-width: 600px) {
-    min-height: calc(67.5vh);
-}
 
 }
 
@@ -34,7 +26,7 @@ $color-principal: #b0a092;
 
   @media (max-width: 768px) {
     font-size: 50px; // Ajustez selon le besoin
-    margin-top: 18%;
+    margin-top: 35%;
     margin-right: 15%;
     text-align: right;
   }
@@ -80,5 +72,35 @@ $color-principal: #b0a092;
       transform: translateX(0);
       opacity: 1;
     }
+  }
+
+  @keyframes moveUpDown {
+    from {
+      transform: translateY(-10%); /* Commence 10% au-dessus de la position initiale */
+    }
+    to {
+      transform: translateY(0); /* Retour à la position initiale */
+    }
+}
+
+img[alt="photo"] {
+    width: 15%;
+    padding-left: 40%;
+    animation: moveUpDown 0.5s ease-in-out infinite alternate; /* Applique l'animation */
+}
+
+ .footer {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    width: 100%; /* Assurez-vous que le footer prend toute la largeur si nécessaire */
+  }
+
+  .click {
+    padding-bottom: 10px;
+    font-size: 16px; 
+    color: $color-principal;
   }
 

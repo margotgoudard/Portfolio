@@ -6,7 +6,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjetComponent } from './components/projet/projet.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' }, // Redirect empty path to 'accueil'
+  { path: '', redirectTo: '/profil', pathMatch: 'full' }, // Redirect empty path to 'accueil'
   { path: 'accueil', component: AccueilComponent },
   { path: 'profil', component: ProfilComponent },
   { path: 'experiencepro', component: ExperienceComponent },
