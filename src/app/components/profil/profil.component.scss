@@ -33,19 +33,26 @@
     animation: slideOutUp 2s forwards; /* Ajustez la durée selon vos préférences */
   }
 
-.section1{
-	width : 100%; /*section prend l'intégralité de la taille de l'écran*/
-	height: 100%;
+  .section1 {
+    width: 100%; /* La section prend l'intégralité de la largeur de l'écran */
+    height: 88vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
+    background-color: white; /* Fond blanc */
+    @media (max-width: 600px) {
+        height : 40vh;
+      }
 }
 
 /*stylisation bloc1*/
 .bloc1 {
 	float:left; /*position relative sur la gauche*/
-	margin-top: 5%;
 	margin-left: 5%;
 	background-color: white;
 	width : 30%;
 	height : 50%;
+    @media (max-width: 600px) {
+        width : 30%;
+	    height : 40%;
+      }
 }
 
 /*stylisation image*/
@@ -53,6 +60,7 @@
 	width : 50%;
 	clip-path:ellipse(50% 35%); /*forme de rond*/
 	margin : auto; /*met au centre du bloc*/
+     
 }
 
 /*stylisation texte bloc*/
@@ -65,21 +73,33 @@
 .bloc2 {
 	float : right; /*position relative sur la droite*/
 	margin-top: 7%;
-	margin-right: 20%;
+	margin-right: 22%;
 	width : 40%;
 	height : 22%;
+    background-color: #b0a092;
+    border-radius: 10px;
+    padding :20px;
+    @media (max-width: 600px) {
+        width : 60%;
+        margin-right: 2%;
+        height: 32%;
+        padding :2px;
+      }
 
 }
 /*stylisation contenu bloc2*/
 .conteneur {
-	position : absolute; 
 	padding : 2%;
 	font-size: 16pt;
     border-radius: 10px;
 	color : white;
-    background-color: #b0a092;
 	animation-name: animation; /*attribution d'une animation*/
 	animation-duration: 2s; /*durée de l'animation*/
+    padding-left: 20px;
+    @media (max-width: 600px) {
+        font-size: 12px;
+      }
+
 } 
 
 /*animation apparition d'une position à une autre*/
@@ -95,35 +115,6 @@
 	}
   }
  
-/*stylisation section2*/
-.section2{
-	background-color : white ;
-	width : 100%;
-	height : 100%;
-}
-
-/*ancrage*/
-#profilperso {
-	margin-top : 0;
-	color:white;
-}
-
-/*stylisation conteneur2*/
-.conteneur2 {
-	margin-left: 8%; /*marge pour tout le contenu*/
-	margin-right: 8%;
-}
-
-/*stylisation titre1*/
-.section2 h1{
-	margin-top: 3%;
-}
-
-/*stylisation titre2*/
-.section2 h2{
-	margin-left : 2%;
-	margin-top : 5%;
-}
 
 /*stylisation texte*/
 .profil_perso{
@@ -133,11 +124,6 @@
 	margin-right : 5%;
 }
 
-/*stylisation titre3*/
-.section2 h3{
-	margin-left : 2%;
-	margin-top : 3%;
-}
 
 /*stylisation liste*/
 ul#competences1{ 
@@ -176,11 +162,6 @@ ul#competences2 li {
 	background-color : #b0a092;
 }
 
-/*ancrage*/
-#experiencepro {
-	padding-top : 0;
-	color : #b0a092;
-}
 
 /*stylisation titre*/
 .section3 h1 {
@@ -222,69 +203,12 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 	height : 100%;
 }
 
-/*ancrage*/
-#education{
-	margin-top : 0px;
-	color:white;
-}
 
 /*stylisation titre*/
 .section4 h1 {
 	padding-top : 2%;
 }
 
-/*stylisation div ecole*/
-.ecole { 
-	display: inline-block; 
-	height: 40%; 
-	width: 25%;
-	clip-path: ellipse(45% 40%); /*bloc en forme de rond*/
-	margin-bottom: 3%;
-	margin-top : 3%;
-	margin-left: 12%;
-	padding-top: 10%;
-	text-align: center;
-	background-color: #b7cdb7;
-	filter:opacity(80%);/*modification opacité*/
-	filter:brightness(90%); /*modification luminosité*/
-	} 
-	
-/*stylisation div peip*/
-.peip {
-	display: inline-block;
-	height: 40%; 
-	width: 25%;
-	clip-path: ellipse(45% 40%); 
-	padding-top: 10%;
-	margin-top : 0;
-	text-align: center;
-	background-color: #b0a092;
-	filter:opacity(80%);
-	filter:brightness(90%);
-}
-
-/*stylisation div lycée*/
-.lycée{
-	display: inline-block;
-	height: 40%; 
-	width: 25%;
-	clip-path: ellipse(45% 40%); 
-	padding-top: 10%;
-	text-align: center;
-	background-color: #b7cdb7;
-	filter:opacity(80%);
-	filter:brightness(90%);
-}
-
-/*stylisation footer*/
-
-
-/*ancrage*/
-#contact {
-	margin-left: 5%;
-	color: white;
-	padding-top : 1%;
-}
 
 
 
@@ -324,13 +248,32 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 }
 
 .arrow {
-    position: absolute;
-    left: 30%;
-    top: 50px; /* Ajustez cette valeur selon la position désirée */
+    margin-left: 30%;
+    margin-right: -10px;
+    margin-top: 4%;
     animation: bounce 2s infinite;
     transform: translateX(-50%);
 }
 
+.texte {
+    margin-top: 4%;
+    font-size: 18px;
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding-right: 10px;
+      }
+}
+
+img[alt="flèche"] {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    animation: moveUpDown 0.5s ease-in-out infinite alternate; /* Applique l'animation */
+}
+
+img[alt="photo"] {
+    width: 100%;
+}
 
 @keyframes bounce {
     0%, 100% {
@@ -341,9 +284,17 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
     }
 }
 
-.texte {
-    position: absolute;
-    left: 545px;
-    top: 85px;
-    font-size: 20px
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+@keyframes moveUpDown {
+    from {
+      transform: translateY(-10%); /* Commence 10% au-dessus de la position initiale */
+    }
+    to {
+      transform: translateY(0); /* Retour à la position initiale */
+    }
 }
