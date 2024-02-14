@@ -66,19 +66,18 @@
 	float : right; /*position relative sur la droite*/
 	margin-top: 7%;
 	margin-right: 20%;
-	background-color: #b0a092;
 	width : 40%;
 	height : 22%;
-    border-radius: 10px;
 
 }
 /*stylisation contenu bloc2*/
 .conteneur {
 	position : absolute; 
-	padding-top : 1%;
-	padding-left: 3%;
+	padding : 2%;
 	font-size: 16pt;
+    border-radius: 10px;
 	color : white;
+    background-color: #b0a092;
 	animation-name: animation; /*attribution d'une animation*/
 	animation-duration: 2s; /*durée de l'animation*/
 } 

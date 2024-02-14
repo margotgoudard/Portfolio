@@ -7,7 +7,6 @@ import { ProjetComponent } from './components/projet/projet.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/profil', pathMatch: 'full' }, // Redirect empty path to 'accueil'
-  { path: 'accueil', component: AccueilComponent },
   { path: 'profil', component: ProfilComponent },
   { path: 'experiencepro', component: ExperienceComponent },
   { path: 'projets', component: ProjetComponent }
