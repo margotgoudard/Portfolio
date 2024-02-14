@@ -1,57 +1,15 @@
 
-/*stylisation du menu*/
-ul#menu {
-	margin-top : 1%; /*création de marge*/
-	padding-left : 75%; /*décale le menu de 65% du bord gauche*/
-	padding-right : 5%;
-	list-style-type: none; /*enlève tout style au menu (puce..)*/
-	display: flex; /*mise à l'horizontal*/
-	justify-content: space-between;
-}
-
-/*stylisation du texte du menu*/
-ul#menu li a {
-	color: #5B7466; /*couleur du texte*/
-	text-decoration : none; /*enlève les traits de lien*/
-	border-bottom: 1px solid #5B7466; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
-	padding : 8px; /*permet de créer un espacement de 8px entre le texte et le soulignage*/
-}
-
-/*changment de style unique pour l'onglet cv du menu*/
-ul#menu li a.cv {
-	color : black;
-	border-bottom: 1px solid black;
-}
-
-
 /*stylisation section1*/
 .section1{
-	background-image : url("/assets/fond.png"); /*met une image en fond*/
-	background-repeat: repeat-x;
-	background-size: 75% 100%;
 	width : 100%; /*section prend l'intégralité de la taille de l'écran*/
 	height: 100%;
 }
 
-/*stylisation menu*/
-ul#menu2 {
-	position : fixed; /*ne bouge pas pendant le scrolling*/
-	width : 10%;
-	margin-top: 22%;
-	list-style-type: circle; /*style de puce*/
-}
-
-/*stylisation texte menu*/
-ul#menu2 li a {
-	color: black;
-	text-decoration : none; 
-	}
-
 /*stylisation bloc1*/
 .bloc1 {
 	float:left; /*position relative sur la gauche*/
-	margin-top: 15%;
-	margin-left: 20%;
+	margin-top: 5%;
+	margin-left: 5%;
 	background-color: white;
 	width : 30%;
 	height : 50%;
@@ -73,19 +31,20 @@ ul#menu2 li a {
 /*stylisation bloc2*/
 .bloc2 {
 	float : right; /*position relative sur la droite*/
-	margin-top: 15%;
+	margin-top: 7%;
 	margin-right: 20%;
-	background-color: #b7cdb7;
-	width : 30%;
-	height : 50%;
+	background-color: #b0a092;
+	width : 40%;
+	height : 22%;
+    border-radius: 10px;
 
 }
 /*stylisation contenu bloc2*/
 .conteneur {
 	position : absolute; 
-	padding-top : 5%;
+	padding-top : 1%;
 	padding-left: 3%;
-	font-size: 30pt;
+	font-size: 16pt;
 	color : white;
 	animation-name: animation; /*attribution d'une animation*/
 	animation-duration: 2s; /*durée de l'animation*/
@@ -182,13 +141,13 @@ ul#competences2 li {
 .section3{
 	width : 100%;
 	height : 100%;
-	background-color : #5B7466;
+	background-color : #b0a092;
 }
 
 /*ancrage*/
 #experiencepro {
 	padding-top : 0;
-	color : #5B7466;
+	color : #b0a092;
 }
 
 /*stylisation titre*/
@@ -267,7 +226,7 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 	padding-top: 10%;
 	margin-top : 0;
 	text-align: center;
-	background-color: #b7cdb7;
+	background-color: #b0a092;
 	filter:opacity(80%);
 	filter:brightness(90%);
 }
@@ -280,17 +239,13 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 	clip-path: ellipse(45% 40%); 
 	padding-top: 10%;
 	text-align: center;
-	background-color: #b7cdb7;
+	background-color: #b0a092;
 	filter:opacity(80%);
 	filter:brightness(90%);
 }
 
 /*stylisation footer*/
-footer {
-	width : 100%;
-	height: 17%;
-	background-color: #5B7466;
-}
+
 
 /*ancrage*/
 #contact {
@@ -299,15 +254,7 @@ footer {
 	padding-top : 1%;
 }
 
-/*stylisation div contacts*/
-.contacts {
-	float : left;
-	width : 20%;
-	margin-left: 7%;
-	font-size: 18px;
-	margin-top: 1%;
-	color : white;
-}
+
 
 /*stylisation bouton*/
 .bouton {
@@ -342,4 +289,29 @@ footer {
   	font-size: 15px;
   	width: 10%;
   	height: 10%;
+}
+
+.arrow {
+    position: absolute;
+    left: 30%;
+    top: 50px; /* Ajustez cette valeur selon la position désirée */
+    animation: bounce 2s infinite;
+    transform: translateX(-50%);
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        top: 90px; /* Position initiale */
+    }
+    50% {
+        top: 80px; /* La flèche 'rebondit' vers le haut */
+    }
+}
+
+.texte {
+    position: absolute;
+    left: 545px;
+    top: 85px;
+    font-size: 20px
 }

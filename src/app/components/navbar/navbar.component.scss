@@ -29,9 +29,9 @@ ul#menu {
 
 /*stylisation du texte du menu*/
 ul#menu li a {
-	color: #AC967F; /*couleur du texte*/
+	color: #b0a092; /*couleur du texte*/
 	text-decoration : none; /*enlève les traits de lien*/
-	border-bottom: 1px solid #AC967F; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
+	border-bottom: 1px solid #b0a092; /*soulignage par un trait d'épaisseur 1px de couleur blanche*/
 	padding : 8px; 
     @media (max-width: 768px) {
         font-size: 12px;
@@ -94,7 +94,12 @@ img[alt="Logo"] {
      }
 
      ul#menu.open li a {
-        border-bottom: none; /* Supprime le soulignement */
+        border-bottom: none; 
+    }
+
+    ul#menu.open li {
+        padding-top: 8px;
+        margin-bottom: 8px;
     }
    
   }

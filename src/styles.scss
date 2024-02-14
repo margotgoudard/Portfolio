@@ -6,5 +6,11 @@ html, body {
     overflow-x: hidden;
  }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Maharlika-Regular';
+    src: url('/fonts/Maharlika-Regular.ttf') format('truetype'); /* Older browsers */
+    font-weight: normal;
+    font-style: normal;
+}
 
