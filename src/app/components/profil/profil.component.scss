@@ -36,7 +36,10 @@
   .section1 {
     width: 100%; /* La section prend l'intégralité de la largeur de l'écran */
     height: 88vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
-    background-color: white; /* Fond blanc */
+    background-color: white;
+    @media (max-width: 600px) {
+	    height : 80vh;
+      }
 }
 
 /*stylisation bloc1*/
@@ -72,14 +75,12 @@
 	margin-top: 4%;
 	margin-right: 22%;
 	width : 40%;
-	height : 22%;
     background-color: #b0a092;
     border-radius: 10px;
     padding :20px;
     @media (max-width: 600px) {
         width : 58%;
         margin-right: 4%;
-        height: 32%;
         padding :2px;
       }
 
