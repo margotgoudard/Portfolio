@@ -37,9 +37,6 @@
     width: 100%; /* La section prend l'intégralité de la largeur de l'écran */
     height: 88vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
     background-color: white; /* Fond blanc */
-    @media (max-width: 600px) {
-        height : 40vh;
-      }
 }
 
 /*stylisation bloc1*/
