@@ -1,53 +1,25 @@
-
-.composant-accueil {
-    position: fixed; /* ou absolute, selon le contexte */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5); /* Exemple de fond */
-    z-index: 100; /* S'assure qu'il est au-dessus des autres éléments */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: disparition 0.5s ease-out forwards;
-}
-
-.composant-accueil:hover {
-    transform: translateY(-10px); 
-    transition: transform 0.3s ease; 
-  }
-
-  @keyframes slideOutUp {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-  }
-  
-  /* Appliquer l'animation quand la classe .hide est ajoutée */
-  .composant-accueil.hide {
-    animation: slideOutUp 2s forwards; /* Ajustez la durée selon vos préférences */
-  }
-
   .section1 {
     width: 100%; /* La section prend l'intégralité de la largeur de l'écran */
-    height: 88vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
+    height: 100vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
     background-color: white;
     @media (max-width: 600px) {
 	    height : 80vh;
       }
 }
 
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 5%;
+}
 /*stylisation bloc1*/
 .bloc1 {
-	float:left; /*position relative sur la gauche*/
-	margin-left: 5%;
+    display: flex;
+	margin-left: 15%;
+  margin-top: 5%;
 	background-color: white;
-	width : 30%;
+	width : 80%;
 	height : 50%;
     @media (max-width: 600px) {
         width : 30%;
@@ -57,7 +29,7 @@
 
 /*stylisation image*/
 .image {
-	width : 50%;
+	width : 20%;
 	clip-path:ellipse(50% 35%); /*forme de rond*/
 	margin : auto; /*met au centre du bloc*/
      
@@ -71,22 +43,25 @@
 
 /*stylisation bloc2*/
 .bloc2 {
-	float : right; /*position relative sur la droite*/
-	margin-top: 4%;
-	margin-right: 22%;
-	width : 40%;
+	width : 50%;
+  height: 100%;
+  margin-right : 15%;
     background-color: #b0a092;
     border-radius: 10px;
     padding :20px;
     @media (max-width: 600px) {
-        width : 58%;
-        margin-right: 4%;
+        width : 80%;
+        margin-right: 33%;
+        margin:auto;
         padding :2px;
       }
 
 }
+
 /*stylisation contenu bloc2*/
 .conteneur {
+    display: flex;
+    flex-direction: column;
 	padding : 2%;
 	font-size: 16pt;
     border-radius: 10px;
@@ -247,15 +222,15 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 }
 
 .arrow {
-    margin-left: 30%;
-    margin-right: -10px;
-    margin-top: 4%;
+    margin-top: 2%;
+    padding-right:0px;
     animation: bounce 2s infinite;
     transform: translateX(-50%);
 }
 
 .texte {
-    margin-top: 4%;
+    width: 80%;
+    margin-top: 10%;
     font-size: 18px;
     @media (max-width: 600px) {
         font-size: 14px;
@@ -264,10 +239,10 @@ ul#intersport, ul#lidl, ul#ostréicole, ul#cci {
 }
 
 img[alt="flèche"] {
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    animation: moveUpDown 0.5s ease-in-out infinite alternate; /* Applique l'animation */
+    width: 60%;
+    margin-left: 60%;
+    margin-top: 50%;
+    animation: moveLeftToRight 0.5s ease-in-out infinite alternate; /* Applique l'animation */
 }
 
 img[alt="photo"] {
@@ -283,18 +258,21 @@ img[alt="photo"] {
     }
 }
 
-.intro {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 0;
-    margin-right: 4%;
-}
 
-@keyframes moveUpDown {
+@keyframes moveLeftToRight {
     from {
-      transform: translateY(-10%); /* Commence 10% au-dessus de la position initiale */
+      transform: translateX(-10%); 
     }
     to {
-      transform: translateY(0); /* Retour à la position initiale */
+      transform: translateX(0); 
     }
+}
+
+.ligne {
+  display: flex; /* Assure que les éléments de la ligne sont sur la même ligne */
+  align-items: baseline; /* Alignement sur la ligne de base pour une apparence uniforme */
+}
+
+.ligne b, .ligne span {
+  margin-right: 20px; /* Espace entre le texte en gras et le reste de la phrase */
 }

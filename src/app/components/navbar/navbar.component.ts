@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,12 @@ export class NavbarComponent {
 
   @ViewChild('menu', { static: false }) menu!: ElementRef;
 
+  constructor(private navigationService: NavigationService) {}
+
+  setCurrentSection(section: string) {
+    this.navigationService.changeSection(section);
+  }
+
   toggleMenu() {
     const menuElement = this.menu.nativeElement;
     if (menuElement.classList.contains('open')) {
@@ -18,4 +25,13 @@ export class NavbarComponent {
     }
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const nav = document.querySelector('nav');
+    if (window.pageYOffset > 50) { 
+      nav?.classList.add('transparent');
+    } else {
+      nav?.classList.remove('transparent');
+    }
+  }
 }

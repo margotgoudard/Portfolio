@@ -1,1 +1,14 @@
-<p>experience works!</p>
+<div class="section3">
+<h1>EXPERIENCES PROFESSIONNELLES</h1>
+
+<div class="experience-container">
+    <div class="experience" *ngFor="let experience of experiences" (mouseenter)="setCurrentExperience(experience)" (mouseleave)="setCurrentExperience(null)">
+      <div class="experience-title">{{ experience.title }}</div>
+    </div>
+  </div>
+  <div *ngIf="currentExperience" class="experience-detail">
+    <h2>{{ currentExperience.title }}</h2>
+    <p><em>{{ currentExperience.date }} - {{ currentExperience.location }}</em></p>
+    <p>{{ currentExperience.description }}</p>
+  </div>
+</div>

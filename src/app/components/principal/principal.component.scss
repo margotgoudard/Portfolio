@@ -1,0 +1,58 @@
+
+.composant-accueil {
+    position: fixed; /* ou absolute, selon le contexte */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* Exemple de fond */
+    z-index: 100; /* S'assure qu'il est au-dessus des autres éléments */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: disparition 0.5s ease-out forwards;
+}
+
+.composant-accueil:hover {
+    transform: translateY(-10px); 
+    transition: transform 0.3s ease; 
+  }
+
+  @keyframes slideOutUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Appliquer l'animation quand la classe .hide est ajoutée */
+  .composant-accueil.hide {
+    animation: slideOutUp 2s forwards; /* Ajustez la durée selon vos préférences */
+  }
+
+  .arrow {
+    position: fixed; /* Fixe la position par rapport au viewport */
+    top: 50%; /* Centre verticalement */
+    z-index: 1000; /* S'assure que les flèches sont au-dessus des autres composants */
+    transform: translateY(-50%); /* Ajuste le centrage vertical */
+  }
+  
+  .arrow.left {
+    left: 0; 
+    padding-left: 15px;
+  }
+  
+  .arrow.right {
+    right: 0; 
+    padding-right: 15px;
+  }
+  
+  /* Style supplémentaire pour les flèches si nécessaire */
+  .arrow img {
+    width: 65px; /* Exemple de taille */
+    height: auto;
+    cursor: pointer;
+  }

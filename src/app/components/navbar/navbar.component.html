@@ -4,8 +4,11 @@
     </div>
     <button class="hamburger" (click)="toggleMenu()">☰</button>
     <ul id="menu" #menu class="hidden">
-        <li><a routerLink="/profil" routerLinkActive="active"><strong>Profil</strong></a></li>
-        <li><a routerLink="/experiencepro" routerLinkActive="active"><strong>Expériences Professionnelles</strong></a></li>
-        <li><a routerLink="/projets" routerLinkActive="active"><strong>Projets</strong></a></li>
+        <li><a (click)="setCurrentSection('profil')"><strong>Profil</strong></a></li>
+        <li><a (click)="setCurrentSection('education')"><strong>Etudes</strong></a></li>
+        <li><a (click)="setCurrentSection('competences')"><strong>Compétences</strong></a></li>
+        <li><a (click)="setCurrentSection('experiences')"><strong>Expériences</strong></a></li>
+        <li><a (click)="setCurrentSection('projets')"><strong>Projets</strong></a></li>
+        <li><a (click)="setCurrentSection('contacts')"><strong>Contacts</strong></a></li>
     </ul>
 </nav>

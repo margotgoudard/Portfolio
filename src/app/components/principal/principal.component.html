@@ -1,0 +1,43 @@
+<div *ngIf="!showAccueil">
+    <app-navbar></app-navbar>
+</div>
+  
+  <div class="composant-accueil" id="accueil" @fadeInOut (click)="toggleDisplay()">
+    <app-accueil></app-accueil>
+  </div>
+
+<div class="arrow left"  *ngIf="!showAccueil" (click)="previousSection()">
+    <img src="assets/fleche_gauche.png" alt="Flèche gauche">
+  </div>
+  
+  <!-- Section 1 -->
+  <div *ngIf="currentSection === 'profil'" class="composant-profil" id="profil">
+    <app-profil></app-profil>
+  </div>
+  
+  <!-- Section Éducation -->
+  <div *ngIf="currentSection === 'education'" class="composant-education">
+    <app-education></app-education>
+  </div>
+  
+  <!-- Section Compétences -->
+  <div *ngIf="currentSection === 'competences'" class="composant-competences">
+    <app-competences></app-competences>
+  </div>
+
+   <div *ngIf="currentSection === 'experiences'" class="composant-experiences">
+    <app-experience></app-experience>
+  </div>
+
+  <div *ngIf="currentSection === 'projets'" class="composant-projets">
+    <app-projet></app-projet>
+  </div>
+  
+  <div *ngIf="currentSection === 'contacts'" class="composant-contacts">
+    <app-contact></app-contact>
+  </div>
+  
+  <!-- Flèche suivante -->
+  <div class="arrow right"  *ngIf="!showAccueil" (click)="nextSection()">
+    <img src="assets/fleche_droite.png" alt="Flèche droite">
+  </div>

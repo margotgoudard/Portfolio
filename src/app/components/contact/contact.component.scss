@@ -1,0 +1,55 @@
+.section4{
+	width : 100%;
+	height : 100vh;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2, .contact-container p, .contact-container ul, .contact-container a {
+    margin-bottom: 20px;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container li {
+    margin-bottom: 10px;
+}
+
+.contact-container a, .contact-container a:visited {
+    color: #b0a092;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-container a:hover, .contact-container a:active {
+    text-decoration: underline;
+    color: #b0a092;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    background-color: #605750;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cv-download-btn:hover {
+    background-color: #605750;
+}

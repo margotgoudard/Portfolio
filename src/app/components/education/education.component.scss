@@ -1,39 +1,20 @@
-/*stylisation section2*/
 .section2{
 	background-color : #b0a092 ;
 	width : 100%;
 	height : 100vh;
 }
 
-
-/*stylisation titre1*/
-h1{
-    margin-left: 3%;
-    margin-top: 3%;
-    @media (max-width: 600px) {
-    font-size: 14px;  
-    padding-top: 3%; 
- }
-}
-
-
-/*stylisation titre2*/
-.section2 h2{
-	margin-left : 2%;
-	margin-top : 3%;
-}
-
-/*stylisation titre3*/
-.section2 h3{
-	margin-left : 2%;
-	margin-top : 3%;
-}
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 5%;
+  }
 
 .cercles-container {
-    display: flex; /* Active Flexbox */
+    display: flex; 
     justify-content: center;
-    align-items: center; /* Optionnel: aligne les éléments verticalement au centre, si leurs hauteurs diffèrent */
-    margin-top: 5%;
+    align-items: center; 
     flex-wrap: wrap;
     @media (max-width: 600px) {
         margin-top: 0%;
@@ -46,8 +27,9 @@ h1{
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 25vw;
-    width: 25vw;
+    margin-top: 7%;
+    height: 23vw;
+    width: 23vw;
     clip-path: circle(40%);
     background-color: white;
     filter: opacity(80%) brightness(90%);

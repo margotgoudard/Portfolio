@@ -1,0 +1,47 @@
+.section3{
+	background-color : #b0a092 ;
+	width : 100%;
+	height : 100vh;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    margin-top: 8%;
+  }
+  
+  .experience {
+    width: 200px;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: white;
+    filter: opacity(80%) brightness(90%);
+  }
+  
+  .experience:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .experience-title {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .experience-detail {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 3%;
+  }
+  
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 5%;
+  }

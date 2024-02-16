@@ -11,6 +11,9 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { EducationComponent } from "./components/education/education.component";
 import { NgModule } from "@angular/core";
 import { FooterComponent } from "./components/footer/footer.component";
+import { CompetencesComponent } from "./components/competences/competences.component";
+import { PrincipalComponent } from "./components/principal/principal.component";
+import { ContactComponent } from "./components/contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FooterComponent } from "./components/footer/footer.component";
     ExperienceComponent,
     NavbarComponent,
     EducationComponent,
-    FooterComponent
+    FooterComponent,
+    CompetencesComponent,
+    PrincipalComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
