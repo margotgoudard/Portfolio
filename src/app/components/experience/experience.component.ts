@@ -16,7 +16,7 @@ export class ExperienceComponent {
       description: 'Développement d\'une application web pour le groupe VOLKSWAGEN, optimisant Angular, TypeScript, HTML et CSS sur Windows. Expertise en déploiement de solutions esthétiques et réactives, guidé par une méthodologie Agile via Jira pour une exécution efficace et collaborative.'
     },
     {
-      title: 'Conseillère de Vente - Interport',
+      title: 'Conseillère de Vente - Intersport',
       date: 'Juillet-Août 2022',
       location: 'Balaruc',
       description: 'Développement des compétences telles que le travail d\'équipe, l\'adaptabilité et la résolution proactive de problèmes, en anticipant les besoins des clients et en contribuant à un environnement de travail collaboratif et productif.'
