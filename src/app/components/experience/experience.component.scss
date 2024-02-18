@@ -3,10 +3,14 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  padding-top: 10%;
+  margin: auto;
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0.4s;
+  @media (max-width: 600px) {
+    width : 80%
+}
 }
 
 .timeline {
@@ -79,9 +83,18 @@
   width: auto; /* S'assure que la largeur est automatiquement ajustée */
 }
 
-@media (max-width: 768px) {
-  .timeline-item {
-    width: 80%; /* Ajustement pour les petits écrans */
-  }
+h2 {
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size : 14px
+}
+}
+
+p {
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size : 14px
+}
+
 }
 

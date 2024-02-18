@@ -1,10 +1,17 @@
-  .section1 {
-    width: 100%; /* La section prend l'intégralité de la largeur de l'écran */
-    height: 100vh; /* La section prend toute la hauteur de la fenêtre de visualisation */
+  .composant-profil {
+    width: 100%; 
+    height: 100vh; 
     background-color: #b0a092;
     @media (max-width: 600px) {
 	    height : 100vh;
       }
+}
+
+.section1 {
+  margin: auto;
+  @media (max-width: 600px) {
+    width: 80%;
+    }
 }
 
 h1 {
@@ -76,9 +83,11 @@ h1 {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0.4s;
+  text-align: justify; 
+
     padding-left: 20px;
     @media (max-width: 600px) {
-        font-size: 12px;
+        font-size: 14px;
         padding-left : 4px
       }
 
@@ -108,9 +117,11 @@ h1 {
     width: 80%;
     margin-top: 10%;
     font-size: 18px;
+    text-align: justify; 
     @media (max-width: 600px) {
-        font-size: 14px;
+        font-size: 16px;
         padding-right: 10px;
+        width: 70%;
       }
 }
 
@@ -158,6 +169,6 @@ img[alt="photo"] {
 
 @media (max-width: 600px) {
   .image {
-     min-width: 50%; /* Ajuste la largeur à 50% pour les petits écrans */
+     min-width: 80%; /* Ajuste la largeur à 50% pour les petits écrans */
   }
 }
