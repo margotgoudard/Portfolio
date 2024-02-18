@@ -11,13 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/principal', pathMatch: 'full' }, 
-  { path: 'principal', component: PrincipalComponent },
-  { path: 'profil', component: PrincipalComponent },
-  { path: 'experiencepro', component: PrincipalComponent },
-  { path: 'projets', component: PrincipalComponent },
-  { path: 'etudes', component: PrincipalComponent },
-  { path: 'competences', component: PrincipalComponent },
-  { path: 'contacts', component: PrincipalComponent }
+  { path: '/principal', component: PrincipalComponent },
 ];
 
 @NgModule({
