@@ -33,7 +33,7 @@ $color-principal: #b0a092;
   }
   @media (max-width: 600px) {
     margin-left: 20%;
-    margin-top: 70%;
+    margin-top: 50%;
     font-size: 40px; 
   }
 }
@@ -47,11 +47,13 @@ $color-principal: #b0a092;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 
   @media (max-width: 768px) {
-    font-size: 16px; 
+    font-size: 20px; 
     margin: 20% 10% 0;
   }
   @media (max-width: 600px) {
-    margin-top: 30%
+    margin-top: 30%;
+    font-size: 20px; 
+
   }
 }
 

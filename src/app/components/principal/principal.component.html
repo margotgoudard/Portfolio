@@ -1,8 +1,8 @@
 <div *ngIf="!showAccueil">
     <app-navbar></app-navbar>
 </div>
-  
-  <div class="composant-accueil" id="accueil" @fadeInOut (click)="toggleDisplay()">
+<div id="light" [ngStyle]="{'left': lightX + 'px', 'top': lightY + 'px'}"></div>
+<div class="composant-accueil" id="accueil" @fadeInOut (click)="toggleDisplay()">
     <app-accueil></app-accueil>
   </div>
 
@@ -11,7 +11,7 @@
   </div>
   
   <!-- Section 1 -->
-  <div *ngIf="currentSection === 'profil'" class="composant-profil" id="profil">
+  <div *ngIf="currentSection === 'profil'&& !showAccueil" class="composant-profil" id="profil">
     <app-profil></app-profil>
   </div>
   

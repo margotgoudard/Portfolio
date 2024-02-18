@@ -1,12 +1,7 @@
-h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    padding-top: 5%;
-}
 h2 {
     text-align: center;
     background-color: #b0a092;
+    border-radius: 10px;
     color: #fff;
     padding: 10px;
     font-size: 15px;
@@ -19,16 +14,27 @@ div {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 80%;
     max-width: 800px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-delay: 0.4s;
 }
 ul {
-    list-style-type: none;
+    text-align: center;
     padding: 0;
+    list-style-type: none;
 }
 li {
+    display: inline-block;
     text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    border: 1px solid #eee;
+    border-radius: 25px;
+    margin: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
 }
+
 li:last-child {
     border-bottom: none;
 }

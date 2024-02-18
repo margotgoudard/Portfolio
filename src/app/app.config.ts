@@ -10,7 +10,6 @@ import { ExperienceComponent } from "./components/experience/experience.componen
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { EducationComponent } from "./components/education/education.component";
 import { NgModule } from "@angular/core";
-import { FooterComponent } from "./components/footer/footer.component";
 import { CompetencesComponent } from "./components/competences/competences.component";
 import { PrincipalComponent } from "./components/principal/principal.component";
 import { ContactComponent } from "./components/contact/contact.component";
@@ -24,10 +23,9 @@ import { ContactComponent } from "./components/contact/contact.component";
     ExperienceComponent,
     NavbarComponent,
     EducationComponent,
-    FooterComponent,
     CompetencesComponent,
     PrincipalComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

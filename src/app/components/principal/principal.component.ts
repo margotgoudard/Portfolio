@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
 
 @Component({
@@ -6,9 +6,11 @@ import { NavigationService } from '../../services/navigation.service';
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.scss'
 })
-export class PrincipalComponent {
+export class PrincipalComponent implements OnInit {
 
   currentSection = 'profil'; 
+  lightX: number = 0;
+  lightY: number = 0;
 
   sections = ['profil', 'education', 'competences', 'experiences', 'projets', 'contacts']; // Les IDs de vos sections
   showAccueil: boolean = true;
@@ -20,6 +22,10 @@ export class PrincipalComponent {
     });
 
     this.navigationService.changeSection('profil');
+  }
+
+  ngOnInit(): void {
+      this.showAccueil = true;
   }
 
   toggleDisplay() {
@@ -44,4 +50,11 @@ export class PrincipalComponent {
     const previousIndex = (currentIndex - 1 + this.sections.length) % this.sections.length;
     this.currentSection = this.sections[previousIndex];
   }
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(e: MouseEvent) {
+    this.lightX = e.pageX - 50; // Décale la lumière pour centrer sur le curseur
+    this.lightY = e.pageY - 50;
+  }
+  
 }

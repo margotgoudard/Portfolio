@@ -1,14 +1,14 @@
-<div class="section3">
-<h1>EXPERIENCES PROFESSIONNELLES</h1>
+<h1>EXPERIENCES</h1>
 
-<div class="experience-container">
-    <div class="experience" *ngFor="let experience of experiences" (mouseenter)="setCurrentExperience(experience)" (mouseleave)="setCurrentExperience(null)">
-      <div class="experience-title">{{ experience.title }}</div>
+<div class="timeline-container">
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let experience of experiences" (mouseenter)="setCurrentExperience(experience)" (mouseleave)="setCurrentExperience(null)" [attr.data-year]="experience.date">
+      <div class="experience-title" [attr.data-year]="experience.date">{{ experience.title }}</div>
+      <div *ngIf="currentExperience === experience" class="experience-detail">
+        <h2>{{ experience.title }}</h2>
+        <p><em>{{ experience.date }} - {{ experience.location }}</em></p>
+        <p>{{ experience.description }}</p>
+      </div>
     </div>
-  </div>
-  <div *ngIf="currentExperience" class="experience-detail">
-    <h2>{{ currentExperience.title }}</h2>
-    <p><em>{{ currentExperience.date }} - {{ currentExperience.location }}</em></p>
-    <p>{{ currentExperience.description }}</p>
   </div>
 </div>

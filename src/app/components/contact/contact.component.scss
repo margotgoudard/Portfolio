@@ -1,12 +1,13 @@
 .section4{
 	width : 100%;
 	height : 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-container {
-    max-width: 600px;
-    margin: auto;
-    margin-top: 10%;
+    width: 40%;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -28,8 +29,8 @@
     margin-bottom: 10px;
 }
 
-.contact-container a, .contact-container a:visited {
-    color: #b0a092;
+.contact-container li a, .contact-container li a:visited {
+    color:  #b0a092;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
@@ -41,8 +42,8 @@
 
 .cv-download-btn {
     display: inline-block;
-    background-color: #605750;
-    color: white;
+    background-color: #b0a092; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -51,5 +52,19 @@
 }
 
 .cv-download-btn:hover {
-    background-color: #605750;
+    background-color: #f9f9f9;
+}
+@media (max-width: 600px) {
+    .contact-container {
+        margin-top: 5%; /* Réduction de la marge supérieure */
+        padding: 10px; /* Ajustement du padding */
+    }
+
+    .contact-container h2, .contact-container p, .contact-container ul, .contact-container a {
+        margin-bottom: 10px; /* Réduction de l'espacement */
+    }
+
+    .cv-download-btn {
+        padding: 5px 10px; /* Ajustement du padding du bouton */
+    }
 }

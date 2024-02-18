@@ -1,21 +1,18 @@
 .section2{
-	background-color : #b0a092 ;
+	background-color : white ;
 	width : 100%;
 	height : 100vh;
 }
 
-h1 {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 0;
-    padding-top: 5%;
-  }
 
 .cercles-container {
     display: flex; 
     justify-content: center;
     align-items: center; 
     flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-delay: 0.4s;
     @media (max-width: 600px) {
         margin-top: 0%;
     }
@@ -27,7 +24,7 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 4%;
     height: 23vw;
     width: 23vw;
     clip-path: circle(40%);
@@ -59,4 +56,54 @@ img[alt="etude"] {
     @media (max-width: 600px) {
         width: 4%;
     }
+}
+/* Animation de base pour les éléments qui se déplacent de haut en bas */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Interaction au survol sur les cercles */
+.montpellier:hover, .ecole:hover, .peip:hover, .lycée:hover {
+    filter: opacity(100%) brightness(110%);
+    transform: scale(1.05); /* Légèrement agrandir */
+    transition: transform 0.3s, filter 0.3s; /* Transition douce */
+}
+
+/* Responsive design pour améliorer l'affichage sur différents appareils */
+@media (max-width: 1024px) {
+    .cercles-container {
+        justify-content: space-around; /* Meilleure gestion de l'espace */
+    }
+
+    .montpellier, .ecole, .peip, .lycée {
+        height: 40vw; /* Taille ajustée pour les tablettes */
+        width: 40vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .montpellier, .ecole, .peip, .lycée {
+        font-size: 10px; /* Taille de police plus petite pour les textes dans les cercles */
+    }
+}
+
+/* Ajouter une interaction sur un élément spécifique pour montrer sa réactivité */
+.some-element:hover {
+    animation: pulseAnimation 1s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Assurez-vous d'ajouter des transitions douces pour les interactions */
+* {
+    transition: all 0.3s ease-in-out;
 }
