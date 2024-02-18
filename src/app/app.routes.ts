@@ -11,13 +11,13 @@ import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/principal', pathMatch: 'full' }, 
-  { path: '/principal', component: PrincipalComponent },
-  { path: '/profil', component: ProfilComponent },
-  { path: '/experiencepro', component: ExperienceComponent },
-  { path: '/projets', component: ProjetComponent },
-  { path: '/etudes', component: EducationComponent },
-  { path: '/competences', component: CompetencesComponent },
-  { path: '/contacts', component: ContactComponent }
+  { path: 'principal', component: PrincipalComponent },
+  { path: 'profil', component: ProfilComponent },
+  { path: 'experiencepro', component: ExperienceComponent },
+  { path: 'projets', component: ProjetComponent },
+  { path: 'etudes', component: EducationComponent },
+  { path: 'competences', component: CompetencesComponent },
+  { path: 'contacts', component: ContactComponent }
 ];
 
 @NgModule({
