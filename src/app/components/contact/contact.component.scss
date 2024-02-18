@@ -13,16 +13,20 @@
 }
 
 .contact-options {
-    margin-top: 10%;
+    margin-top: 7%;
     display: flex;
     justify-content: space-around;
     gap: 20px; 
     flex-wrap: wrap; 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments verticalement */
+    }
 }
 
 .contact-option {
     flex: 1; /* Cela permet à chaque option de s'étendre pour occuper l'espace disponible */
-    min-width: 200px; /* Cela garantit que chaque option ne devienne pas trop petite */
+    width: 100%; /* Cela garantit que chaque option ne devienne pas trop petite */
     padding: 20px;
     background-color: #b0a092;
     border-radius: 10px;
@@ -81,11 +85,27 @@ p {
     font-size: 18px;
 }
 
-.contact-option a {
-    color: white; 
-    text-decoration: none; 
+a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* Permet d'utiliser flexbox pour le centrage */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 25%; /* Assure que le lien remplit le conteneur */
+    height: 25%; /* Assure que le lien remplit le conteneur */
+    @media (max-width: 768px) {
+        width: 90%; /* Assure que le lien remplit le conteneur */
+        height: 90%; /* Assure que le lien remplit le conteneur */
+    }
 }
 
-.contact-option a:hover, .contact-option a:focus {
+a:hover, a:focus {
     cursor: pointer;
+}
+
+h3 {
+    font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 }

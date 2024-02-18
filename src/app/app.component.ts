@@ -7,7 +7,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Portofolio';
+  title = 'Portfolio';
 
   isAccueilPage: boolean = true;
 
