@@ -12,12 +12,12 @@ import { ContactComponent } from './components/contact/contact.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/principal', pathMatch: 'full' }, 
   { path: '/principal', component: PrincipalComponent },
-  { path: '/profil', component: PrincipalComponent },
-  { path: '/experiencepro', component: PrincipalComponent },
-  { path: '/projets', component: PrincipalComponent },
-  { path: '/etudes', component: PrincipalComponent },
-  { path: '/competences', component: PrincipalComponent },
-  { path: '/contacts', component: PrincipalComponent }
+  { path: '/profil', component: ProfilComponent },
+  { path: '/experiencepro', component: ExperienceComponent },
+  { path: '/projets', component: ProjetComponent },
+  { path: '/etudes', component: EducationComponent },
+  { path: '/competences', component: CompetencesComponent },
+  { path: '/contacts', component: ContactComponent }
 ];
 
 @NgModule({
