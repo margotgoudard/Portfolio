@@ -11,7 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/principal', pathMatch: 'full' }, 
-  { path: '/principal', component: PrincipalComponent },
+  { path: 'principal', component: PrincipalComponent },
 ];
 
 @NgModule({
