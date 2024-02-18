@@ -64,3 +64,21 @@
     text-decoration: none; 
     color: black;
 }
+
+h3 {
+  @media (max-width: 600px) {
+  font-size: 16px;
+}
+}
+
+p {
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+span {
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}

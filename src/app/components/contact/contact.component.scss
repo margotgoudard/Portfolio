@@ -57,21 +57,7 @@
 .cv-download-btn:hover {
     background-color: #f9f9f9;
 }
-@media (max-width: 600px) {
-    .contact-container {
-        margin-top: 5%; /* Réduction de la marge supérieure */
-        padding: 10px; 
-        font-size: 14px;
-    }
 
-    .contact-container h2, .contact-container p, .contact-container ul, .contact-container a {
-        margin-bottom: 10px; /* Réduction de l'espacement */
-    }
-
-    .cv-download-btn {
-        padding: 5px 10px; /* Ajustement du padding du bouton */
-    }
-}
 
 h2 {
     font-size: 18px;
